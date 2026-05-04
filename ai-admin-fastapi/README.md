@@ -15,16 +15,15 @@
 
 ## 项目目录结构
 ai-admin-fastapi/
-├── app/
-│   ├── api/          # 接口控制层（Controller）：路由定义
-│   ├── service/      # 业务逻辑层（Service）：核心功能处理
-│   ├── dao/          # 数据访问层（DAO）：数据库操作
-│   ├── model/        # 数据模型（ORM实体类 + 参数校验）
-│   ├── utils/        # 工具类（JWT、数据库连接、异常处理）
-│   ├── config/       # 项目配置读取
-│   └── main.py       # 项目入口文件
-├── .env.example      # 环境变量模板
-├── README.md         # 项目说明
+├── api/          # 接口控制层（Controller）：路由定义
+├── service/      # 业务逻辑层（Service）：核心功能处理
+├── dao/          # 数据访问层（DAO）：数据库操作
+├── model/        # 数据模型（ORM实体类 + 参数校验）
+├── utils/        # 工具类（JWT、数据库连接、异常处理）
+├── config/       # 项目配置读取
+├── main.py       # 项目入口文件
+├── .env.example  # 环境变量模板
+├── README.md     # 项目说明
 └── requirements.txt  # 项目依赖
 
 ## 已实现功能
