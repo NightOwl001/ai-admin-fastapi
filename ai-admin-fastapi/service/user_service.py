@@ -54,12 +54,13 @@ def get_user_list_service(
     username: str = None
 ):
     logger.info(f"用户列表查询请求: page={page},page_size={page_size},username={username}")
-    # 调用DAO层分页查询
     user_list,total = get_user_list_with_page(db,page,page_size,username)
-
-    # 封装分页数据
+    
+    #ORM对象批量转为Pydantic响应模型
+    resp_list = [UserResponse.model_validate(item) for item in user_list]
+    
     data = {
-        "list": user_list,
+        "list": resp_list,
         "total": total,
         "page": page,
         "page_size": page_size
