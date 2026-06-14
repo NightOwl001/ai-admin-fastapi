@@ -29,8 +29,6 @@ ai-admin-fastapi/
 ├── README.md # 项目说明文档
 └── requirements.txt # 项目依赖清单
 
-text
-
 ## 已实现功能
 
 ### 用户模块
