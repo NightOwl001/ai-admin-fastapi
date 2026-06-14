@@ -29,7 +29,7 @@ ai-admin-fastapi/
 ├── .env.example      # 环境变量模板
 ├── README.md         # 项目说明文档
 └── requirements.txt  # 项目依赖清单
-
+```
 ## 已实现功能
 
 ### 用户模块
@@ -66,7 +66,7 @@ ai-admin-fastapi/
 
 - 集成大模型 API（DeepSeek）实现 Excel/TXT 文档的字段自动提取（JSON 输出）。
 - 支持批量导入时的数据清洗与校验。
-```
+
 ## 项目启动
 
 ### 安装依赖
