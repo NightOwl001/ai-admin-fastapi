@@ -66,7 +66,7 @@ ai-admin-fastapi/
 
 - 集成大模型 API（DeepSeek）实现 Excel/TXT 文档的字段自动提取（JSON 输出）。
 - 支持批量导入时的数据清洗与校验。
-
+```
 ## 项目启动
 
 ### 安装依赖
