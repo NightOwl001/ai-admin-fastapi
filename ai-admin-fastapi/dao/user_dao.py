@@ -15,10 +15,6 @@ def get_user_by_username(db: Session,username: str) -> User | None:
     """根据用户名查询用户"""
     return db.query(User).filter(User.username == username).first()
 
-# def get_all_users(db: Session) -> list[User]:
-#     """查询所有用户"""
-#     return db.query(User).all()
-
 def get_user_list_with_page(
     db: Session,
     page: int = 1,
@@ -33,14 +29,12 @@ def get_user_list_with_page(
     :return: 用户列表,总条数
     """
     query = db.query(User)
-
-    # 条件查询: 用户名模糊匹配
-    if username:
-        query = query.filter(User.username.like(f"%{username}"))
-
-    # 分页参数处理(从0开始偏移)
+    #修复1：只有username非空且不是纯空格时才拼接模糊条件
+    if username is not None and username.strip() != "":
+        #修复2：前后通配符，实现真正的包含模糊查询
+        query = query.filter(User.username.like(f"%{username}%"))
+    
     offset = (page - 1) * page_size
     total = query.count()
     user_list = query.offset(offset).limit(page_size).all()
-
     return user_list,total
