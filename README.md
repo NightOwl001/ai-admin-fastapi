@@ -72,10 +72,10 @@ ai-admin-fastapi/
 ### 安装依赖
 ```bash
 pip install -r requirements.txt
+```
 配置环境变量
 复制 .env.example 为 .env，填写本地数据库配置：
-
-env
+```env
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_USER=root
@@ -84,14 +84,16 @@ DB_NAME=study
 DB_CHARSET=utf8mb4
 JWT_SECRET_KEY=你的密钥
 JWT_EXPIRE_MINUTES=1440
+```
 启动项目
-bash
+```bash
 uvicorn app.main:app --reload
+```
 访问接口文档
 启动成功后，浏览器打开：
-
-text
+```
 http://127.0.0.1:8000/docs
+```
 注意事项
 若提示 “URL 拼写错误”，请检查项目是否成功启动、端口是否被占用、浏览器地址是否正确（不要漏掉 /docs）。
 
