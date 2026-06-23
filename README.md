@@ -66,7 +66,7 @@ ai-admin-fastapi/
 
 ## 后续计划（AI 模块）
 
-- 基于现有接口封装 Function Calling 工具能力，对接大模型实现 Agent 自主调用
+- 基于现有接口封装 Function Calling 工具能力，对接大模型实现 Agent 自主调用。
 - 探索 RAG 知识库问答模块，积累 AI 后端落地经验。
 
 ## 项目启动
