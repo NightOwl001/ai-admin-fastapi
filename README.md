@@ -85,9 +85,8 @@ ai-admin-fastapi/
 
 ## 项目演示
 
-![索引优化执行计划验证](项目演示/索引优化执行计划验证.png)
-
-![Agent 接口调用示例](项目演示/Agent接口调用示例.png)
+![索引优化执行计划验证](screenshots/index_optimization.png)
+![Agent 接口调用示例](screenshots/agent_chat_example.png)
 
 ### 安装依赖
 ```bash
